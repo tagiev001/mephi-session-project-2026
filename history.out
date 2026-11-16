@@ -1,0 +1,304 @@
+    1  clear
+    2  hostnamectl --host mephi-2026.domain.local
+    3  hostnamectl mephi-2026.domain.local
+    4  hostnamectl set-hostname mephi-2026.domain.local
+    5  clear
+    6  history 
+    7  hostname
+    8  hostnamectl 
+    9  clear
+   10  hostnamectl > hostname.out
+   11  cat hostname.out 
+   12  clear
+   13  ip a
+   14  clear
+   15  nmtui
+   16  ip a
+   17  nmcli device show enp1s0 
+   18  ps aux | grep dhclient
+   19  nmcli connection show 
+   20  nmcli connection show enp1s0 
+   21  nmcli connection show enp1s0  | grep -i dhcp
+   22  lear
+   23  clear
+   24  nmcli connection show enp1s0  | grep -i dhcp.option
+   25  nmcli connection show enp1s0  | grep -i "DHCP.OPTION"
+   26  nmcli connection show enp1s0  | grep -i "DHCP"
+   27  nmcli connection show enp1s0  | grep -i "DHCP4."
+   28  clear
+   29  nmcli connection show enp1s0  | grep -i "DHCP4." > dhcp.out
+   30  clear
+   31  nmcli connection show enp1s0  | grep -i "ipv4.method"
+   32  nmcli connection show enp1s0  | grep -i "ipv4.method" > dhcp.out 
+   33  nmcli connection show enp1s0  | grep -i "ipv4.method" > network.out
+   34  clear
+   35  ip a
+   36  ip en1s0
+   37  ip show
+   38  ip show enp1s0
+   39  ip show 
+   40  ip -br a
+   41  clear
+   42  ip a > network.out
+   43  clear
+   44  cat network.out 
+   45  pinc -c 4 8.8.8.8 > ping.out
+   46  ping -c 4 8.8.8.8 > ping.out
+   47  cat ping.out 
+   48  clear
+   49  dnf update -y
+   50  sudo dnf update -y
+   51  clear
+   52  dnf download tcpdump --destdir /tmp
+   53  rpm -i /tmp/tcpdump-4.99.5-1.red80.x86_64.rpm 
+   54  sudo rpm -i /tmp/tcpdump-4.99.5-1.red80.x86_64.rpm 
+   55  tcpdump 
+   56  clear
+   57  dnf history 
+   58  rpm
+   59  clear
+   60  dnf history > dnf.out
+   61  cat d
+   62  cat dnf.out 
+   63  clear
+   64  lsblk 
+   65  clear
+   66  fdisk /dev/vdb
+   67  sudo fdisk /dev/vdb
+   68  mkfs.ext4 /dev/vdb1
+   69  sudo mkfs.ext4 /dev/vdb1
+   70  clear
+   71  tune2fs -L MEPHI_WEB /dev/vdb1
+   72  sudo tune2fs -L MEPHI_WEB /dev/vdb1
+   73  clear
+   74  lsblk -f
+   75  clear
+   76  lsblk -F > lsblk.out
+   77  lsblk -f > lsblk.out
+   78  cat lsblk.out 
+   79  mkdir /mephi-web
+   80  sudo mkdir /mephi-web
+   81  sudo nano /etc/fstab 
+   82  ls /
+   83  sudo nano /etc/fstab 
+   84  clear
+   85  sudo cat /etc/fstab > fstab.out
+   86  cat fstab.out 
+   87  clear
+   88  mount /dev/vdb1 /mephi-web
+   89  sudo mount /dev/vdb1 /mephi-web
+   90  systemctl daemon-reload 
+   91  clear
+   92  touch /mephi-web/www
+   93  sudo touch /mephi-web/www
+   94  sudo echo 123 > /mephi-web/www
+   95  ls -la /mephi-web/
+   96  ls -laZ /mephi-web/
+   97  dnf install nginx
+   98  dnf install -y  nginx
+   99  sudo dnf install -y  nginx
+  100  dnf install -y libcap-ng-utils
+  101  sudo dnf install -y libcap-ng-utils
+  102  dnf history 
+  103  dnf history > dnf.out
+  104  clear
+  105  systemctl enable nginx
+  106  systemctl start nginx
+  107  curl localhost:80
+  108  clear
+  109  journalctl -u nginx
+  110  journalctl -u nginx > journalctl.out
+  111  journalctl -u -b nginx > journalctl.out
+  112  journalctl -b -u nginx > journalctl.out
+  113  cat journalctl.out 
+  114  clear
+  115  sudo mkdir -p /data/mephi-2026
+  116  useradd -m -u 5501 -s /bin/bash user1
+  117  sudo useradd -m -u 5501 -s /bin/bash user1
+  118  sudo useradd -m -u 5502 -s /bin/bash user2
+  119  sudo useradd -m -u 5503 -s /bin/bash user3
+  120  ls /home/
+  121  clear
+  122  groups user1
+  123  groupadd devs
+  124  sudo groupadd devs
+  125  usermod -aG user1 devs
+  126  usermod -aG devs user1
+  127  sudo usermod -aG devs user1
+  128  sudo usermod -aG devs user2
+  129  sudo usermod -aG devs user3
+  130  groups user1
+  131  clear
+  132  sudo chown -R devs:devs /data/mephi-2026
+  133  sudo chown -R admin:devs /data/mephi-2026
+  134  ls -la /data/
+  135  chmod 
+  136  chmod --help
+  137  man chmod
+  138  history 
+  139  ls -la
+  140  ls -la /data/mephi-2026/
+  141  ls -la /data/
+  142  chown -R root:devs /data/mephi-2026
+  143  sudo chown -R root:devs /data/mephi-2026
+  144  clear
+  145  man setfacl 
+  146  groupadd 
+  147  groupadd -g 4444 curators
+  148  sudo groupadd -g 4444 curators
+  149  clear
+  150  history | user
+  151  history | grep user
+  152  sudo useradd -m -s /bin/bash cur1
+  153  sudo useradd -m -s /bin/bash cur2
+  154  ls /home/
+  155  groups
+  156  cat /etc/group | grep cur
+  157  usermod -aG curators cur1
+  158  sudo usermod -aG curators cur1
+  159  sudo usermod -aG curators cur2
+  160  setfacl g:devs:rwx,g:curators:r-x,o::--- /data/mephi-2026
+  161  setfacl -m g:devs:rwx,g:curators:r-x,o::--- /data/mephi-2026
+  162  sudo setfacl -m g:devs:rwx,g:curators:r-x,o::--- /data/mephi-2026
+  163  clear
+  164  ls -ld /data/mephi-2026
+  165  getfacl /data/mephi-2026
+  166  su user1 -c "touch /data/mephi-2026/test"
+  167  sudo passwd user1
+  168  su user1 -c "touch /data/mephi-2026/test"
+  169  ls -ld /data/mephi-2026/
+  170  sudo ls -ld /data/mephi-2026/
+  171  group user1
+  172  groups user1
+  173  su user1 -c "touch /data/mephi-2026/test"
+  174  sudo ls -ld /data/mephi-2026/
+  175  sudo ls -ld /data/mephi-2026
+  176  sudo cd /data/mephi-2026/
+  177  ls
+  178  sudo su
+  179  su user1
+  180  su user2
+  181  sudo passwd user2
+  182  su user2
+  183  chmod g+s /data/mephi-2026
+  184  sudo chmod g+s /data/mephi-2026
+  185  setfacl -d -m u::rwx,g::rwx,g:devs:rwx,g:curators:r-x,m::rwx,o::--- /data/mephi-2026
+  186  sudo setfacl -d -m u::rwx,g::rwx,g:devs:rwx,g:curators:r-x,m::rwx,o::--- /data/mephi-2026
+  187  clear
+  188  su user1
+  189  su user2
+  190  sudo rm /data/mephi-2026/test
+  191  ls -ld /data/mephi-2026/
+  192  clear
+  193  su user1
+  194  su user2
+  195  su user1
+  196  sudo cat /etc/passwd | grep -i cur
+  197  history 
+  198  history | grep user
+  199  sudo useradd -m -s /bin/bash curator1
+  200  sudo useradd -m -s /bin/bash curator2
+  201  usermod -aG curators curator1
+  202  sudo usermod -aG curators curator1
+  203  sudo usermod -aG curators curator2
+  204  passwd curator1
+  205  sudo passwd curator1
+  206  su curator1
+  207  tcpdump 
+  208  ls -la /usr/bin/tcpdump
+  209  sudo ls -la /usr/bin/tcpdump
+  210  sudo which tcpdump
+  211  sudo ls -la /sbin/tcpdump
+  212  chmod +s /sbin/tcpdump 
+  213  sudo chmod +s /sbin/tcpdump 
+  214  su user1
+  215  clear
+  216  sestatus 
+  217  sestatus > sestatus.out
+  218  sudo cat /etc/security/access.conf 
+  219  getfacl 
+  220  getfacl /data/mephi-2026
+  221  cat /data/mephi-2026/test
+  222  python /data/mephi-2026/test.py
+  223  clear
+  224  getfacl /data/mephi-2026 > getfacl.out
+  225  cat getfacl.out 
+  226  clear
+  227  sudo su
+  228  sudo passwd user1
+  229  cat /etc/login.defs 
+  230  nano /etc/login.defs 
+  231  sudo nano /etc/login.defs 
+  232  clear
+  233  su user1
+  234  sudo cp /etc/login.defs .
+  235  sudo cp /etc/security/pwquality.conf .
+  236  ls
+  237  sudo cp /etc/pam.d/login .
+  238  sudo nano /etc/nginx/nginx.conf
+  239  nginx -t
+  240  ls -Z /usr/share/nginx/html/
+  241  sudo touch /mephi-web/index.html
+  242  nano /mephi-web/index.html 
+  243  sudo nano /mephi-web/index.html 
+  244  ls -Z /mephi-web/index.html 
+  245  ls -la /usr/share/nginx/
+  246  ls -la /usr/share/nginx/html/
+  247  semanage fcontext -a -t httpd_sys_content_t /mephi-web
+  248  chcon -R --reference=/usr/share/nginx/html/ /mephi-web
+  249  sudo chcon -R --reference=/usr/share/nginx/html/ /mephi-web
+  250  sudo chcon -R --reference=/usr/share/nginx/html/ /mephi-web/index.html 
+  251  ls -laZ /mephi-web
+  252  systemctl daemon-reload 
+  253  systemctl restart nginx
+  254  curl  localhost:80
+  255  clear
+  256  rm /mephi-web/www
+  257  sudo rm /mephi-web/www
+  258  clear
+  259  curl localhost:80 > curl.out
+  260  cat
+  261  cat curl.out 
+  262  cp /etc/nginx/nginx.conf .
+  263  ls -Z /mephi-web/
+  264  ls -lZ /mephi-web
+  265  ls -lZ /mephi-web > mephi-web.out
+  266  clear
+  267  curl http://localhost/
+  268  clear
+  269  ls
+  270  stat /data/mephi-2026/ stat.out
+  271  stat /data/mephi-2026/ > stat.out
+  272  cat stat.out 
+  273  clear
+  274  ls | grep get
+  275  getcap /sbin/tcpdump getcap.out
+  276  getcap /sbin/tcpdump > getcap.out
+  277  dnf history > dnf.out
+  278  getenforce 
+  279  getenforce > getenforce.out
+  280  stat /mephi-web >> stat.out
+  281  ls
+  282  cat curl.out 
+  283  ls
+  284  clear
+  285  sudo cp /etc/passwd .
+  286  sudo cp /etc/shadow .
+  287  sudo cp /etc/group .
+  288  ls
+  289  clear
+  290  ls
+  291  mkdir mephi-session-project-2026
+  292  mv * mephi-session-project-2026/
+  293  ls
+  294  ls mephi-session-project-2026/
+  295  cd mephi-session-project-2026/
+  296  clear
+  297  git init
+  298  dnf install -y git
+  299  sudo dnf install -y git
+  300  clear
+  301  git init
+  302  cp /tmp/tcpdump-4.99.5-1.red80.x86_64.rpm .
+  303  cp /tmp/tcpdump-4.99.5-1.red80.i686.rpm .
+  304  history > history.out

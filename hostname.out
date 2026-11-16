@@ -1,0 +1,14 @@
+ Static hostname: mephi-2026.domain.local
+       Icon name: computer-vm
+         Chassis: vm 🖴
+      Machine ID: ace09a541ddd43d3961365155ceac23d
+         Boot ID: 823c5af5ff3146adbacb6439e30a4011
+  Virtualization: kvm
+Operating System: RED OS 8.0.3 (Standard Server Minimal)
+     CPE OS Name: cpe:/o:redos:redos:8
+          Kernel: Linux 6.12.92-1.red80.x86_64
+    Architecture: x86-64
+ Hardware Vendor: QEMU
+  Hardware Model: Standard PC _Q35 + ICH9, 2009_
+Firmware Version: 1.17.0-16.fc45
+   Firmware Date: Tue 2025-06-10
